@@ -1,6 +1,6 @@
 <template>
   <div class="bg-yellow-100 h-screen">
-    <section class="px-2 pt-8 bg-yellow-100 md:px-0">
+    <main class="px-2 pt-8 bg-yellow-100 md:px-0">
       <div
         class="container items-center max-w-6xl px-5 mx-auto space-y-6 text-center"
       >
@@ -22,40 +22,39 @@
         <div
           class="relative flex flex-col justify-center md:flex-row md:space-x-4"
         >
-          <a
-            href="#_"
-            class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-yellow-400 md:mb-0 hover:bg-yellow-600 md:w-auto rounded-lg"
-          >
-            Take a look
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 ml-1"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+          <router-link :to="{ name: 'Cocktail' }">
+            <a
+              class="hover:scale-110 scale-100 duration-150 transform flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-yellow-400 md:mb-0 hover:bg-yellow-600 md:w-auto rounded-lg"
             >
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+              Take a look
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 ml-1"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </router-link>
         </div>
       </div>
       <div
         class="container items-center max-w-3xl px-5 mx-auto mt-8 text-center"
       >
-        <div
-          class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3"
-        >
+        <div class="grid w-full grid-cols- gap-4 sm:grid-cols-3 lg:grid-cols-3">
           <div class="flex flex-col items-center justify-center col-span-1">
             <div class="relative p-5">
               <div
-                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-blue-50"
+                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-blue-200"
               ></div>
               <img
-                class="relative h-52 z-20 w-52 rounded-full"
+                class="relative hover:scale-110 scale-100 duration-150 transform h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(1).jpg"
               />
             </div>
@@ -72,10 +71,10 @@
           <div class="flex flex-col items-center justify-center col-span-1">
             <div class="relative p-5">
               <div
-                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50"
+                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-200"
               ></div>
               <img
-                class="relative h-52 z-20 w-52 rounded-full"
+                class="relative hover:scale-110 scale-100 duration-150 transform h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(2).jpg"
               />
             </div>
@@ -92,10 +91,10 @@
           <div class="flex flex-col items-center justify-center col-span-1">
             <div class="relative p-5">
               <div
-                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-50"
+                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-200"
               ></div>
               <img
-                class="relative h-52 z-20 w-52 rounded-full"
+                class="relative hover:scale-110 scale-100 duration-150 transform h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(3).jpg"
               />
             </div>
@@ -112,10 +111,10 @@
           <div class="flex flex-col items-center justify-center col-span-1">
             <div class="relative p-5">
               <div
-                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50"
+                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-200"
               ></div>
               <img
-                class="relative h-52 z-20 w-52 rounded-full"
+                class="relative hover:scale-110 scale-100 duration-150 transform h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(4).jpg"
               />
             </div>
@@ -132,10 +131,10 @@
           <div class="flex flex-col items-center justify-center col-span-1">
             <div class="relative p-5">
               <div
-                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50"
+                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-200"
               ></div>
               <img
-                class="relative h-52 z-20 w-52 rounded-full"
+                class="relative hover:scale-110 scale-100 duration-150 transform h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(5).jpg"
               />
             </div>
@@ -152,10 +151,10 @@
           <div class="flex flex-col items-center justify-center col-span-1">
             <div class="relative p-5">
               <div
-                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-50"
+                class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-200"
               ></div>
               <img
-                class="relative h-52 z-20 w-52 rounded-full"
+                class="relative hover:scale-110 scale-100 duration-150 transform h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(6).jpg"
               />
             </div>
@@ -170,10 +169,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- Section 2 -->
-    <section class="text-gray-700 pt-8 bg-yellow-100 body-font">
+    <footer class="text-gray-700 pt-8 bg-yellow-100 body-font">
       <div
         class="container flex flex-col items-center px-8 py-4 mx-auto max-w-7xl sm:flex-row"
       >
@@ -269,7 +267,7 @@
           </a>
         </span>
       </div>
-    </section>
+    </footer>
   </div>
 </template>
 
