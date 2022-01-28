@@ -55,13 +55,13 @@
                 class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-blue-50"
               ></div>
               <img
-                class="relative h-44 z-20 w-44 rounded-full"
+                class="relative h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(1).jpg"
               />
             </div>
             <div class="mt-3 space-y-2 text-center">
               <div class="space-y-1 text-lg font-medium leading-6">
-                <h3>Mojito</h3>
+                <h3>Orange Power</h3>
               </div>
               <div
                 class="relative flex items-center justify-center space-x-3"
@@ -75,13 +75,13 @@
                 class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50"
               ></div>
               <img
-                class="relative h-44 z-20 w-44 rounded-full"
+                class="relative h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(2).jpg"
               />
             </div>
             <div class="mt-3 space-y-2 text-center">
               <div class="space-y-1 text-lg font-medium leading-6">
-                <h3>Blue Licor</h3>
+                <h3>Pineapple Licor</h3>
               </div>
               <div
                 class="relative flex items-center justify-center space-x-3"
@@ -95,7 +95,7 @@
                 class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-50"
               ></div>
               <img
-                class="relative h-44 z-20 w-44 rounded-full"
+                class="relative h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(3).jpg"
               />
             </div>
@@ -115,7 +115,7 @@
                 class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50"
               ></div>
               <img
-                class="relative h-44 z-20 w-44 rounded-full"
+                class="relative h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(4).jpg"
               />
             </div>
@@ -135,13 +135,13 @@
                 class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50"
               ></div>
               <img
-                class="relative h-44 z-20 w-44 rounded-full"
+                class="relative h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(5).jpg"
               />
             </div>
             <div class="mt-3 space-y-2 text-center">
               <div class="space-y-1 text-lg font-medium leading-6">
-                <h3>Corpse Reviver #2</h3>
+                <h3>Mango Flavour</h3>
               </div>
               <div
                 class="relative flex items-center justify-center space-x-3"
@@ -155,13 +155,13 @@
                 class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-50"
               ></div>
               <img
-                class="relative h-44 z-20 w-44 rounded-full"
+                class="relative h-52 z-20 w-52 rounded-full"
                 src="../assets/images/img-(6).jpg"
               />
             </div>
             <div class="mt-3 space-y-2 text-center">
               <div class="space-y-1 text-lg font-medium leading-6">
-                <h3>Green Pumpkins</h3>
+                <h3>Green Lemons</h3>
               </div>
               <div
                 class="relative flex items-center justify-center space-x-3"
