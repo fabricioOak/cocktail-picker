@@ -13,6 +13,9 @@ const CocktailsService = {
   },
   async getRandomCocktail () {
     return await ApiService.get(Cocktails.getRandomCocktail)
+  },
+  async getCocktailDetails (id) {
+    return await ApiService.get(Cocktails.getCocktailDetails(id))
   }
 }
 
