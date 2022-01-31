@@ -2,7 +2,7 @@
   <div>
     <Header @search-drink="searchCocktail" v-model="search" />
     <main v-if="!loading">
-      <h1 class="text-center text-4xl font-black mt-10">
+      <h1 class="text-center text-2xl sm:text-4xl font-black mt-10">
         🍹You should try this one🍹
       </h1>
       <div
