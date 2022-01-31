@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Landing from '../views/Landing.vue'
 import Home from '../views/Home.vue'
-import Cocktail from '../views/cocktail.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Landing',
+    component: Landing
   },
   {
-    path: '/',
-    name: 'Cocktail',
-    component: Cocktail
+    path: '/home',
+    name: 'Home',
+    component: Home
   }
 ]
 
