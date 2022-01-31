@@ -17,7 +17,7 @@ export default new Vuex.Store({
     setLoading ({ commit }, isLoading) {
       commit('SET_LOADING', isLoading)
     },
-    searchCocktail ({ commit }, name) {
+    searchCocktail ({ commit }, { name }) {
       return new Promise((resolve, reject) => {
         commit('SET_LOADING', true)
         CocktailsService.searchCocktail(name)
@@ -31,7 +31,7 @@ export default new Vuex.Store({
           })
       })
     },
-    searchByLetter ({ commit }, letter) {
+    searchByLetter ({ commit }, { letter }) {
       return new Promise((resolve, reject) => {
         commit('SET_LOADING', true)
         CocktailsService.searchByLetter(letter)
