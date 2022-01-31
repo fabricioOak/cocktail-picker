@@ -1,7 +1,10 @@
 <template>
   <div>
-    <Header />
-    <main>
+    <Header @search-drink="searchCocktail" v-model="search" />
+    <main v-if="!loading">
+      <h1 class="text-center text-4xl font-black mt-10">
+        🍹You should try this one🍹
+      </h1>
       <div
         class="mt-10 flex flex-col justify-center h-3/4 max-h-full items-center md:flex-row py-8"
       >
@@ -11,8 +14,9 @@
               class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-200"
             ></div>
             <img
+              @click="getDetails"
               :src="this.drinks.strDrinkThumb"
-              class="relative hover:scale-100 scale-90 duration-150 transform h-56 z-20 w-h-56 lg:h-96 lg:w-96 rounded-full"
+              class="relative cursor-pointer hover:scale-100 scale-90 duration-150 transform h-56 z-20 w-56 lg:h-96 lg:w-96 rounded-full"
             />
           </div>
         </div>
@@ -38,11 +42,13 @@
               <span>{{ this.drinks.strCategory }}</span>
             </div>
             <h1 class="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl">
-              <a href="#_">{{ this.drinks.strDrink }}</a>
+              <a class="cursor-pointer" @click="getDetails">{{
+                this.drinks.strDrink
+              }}</a>
             </h1>
             <p class="pt-2 text-sm font-medium">
               Category:
-              <a href="#_" class="mr-1 underline">
+              <a href="#_" class="mr-1 font-bold">
                 {{ this.drinks.strAlcoholic }}</a
               >
               | <span class="mx-1">Main ingredient</span> :
@@ -50,18 +56,23 @@
                 this.drinks.strIngredient1
               }}</span>
             </p>
-            <div>
-              <button
-                class="border-2 py-2 px-4 rounded-full bg-pink-500 text-white transition-all duration-150 ease-in hover:bg-pink-600"
-              >
-                Try this one
-              </button>
-            </div>
+            <div></div>
           </div>
         </div>
       </div>
     </main>
-    <AlphabetDrinks class="fixed bottom-0 mb-10" />
+    <main v-else>
+      <div class="h-screen bg-white">
+        <div class="flex justify-center items-center h-full">
+          <img
+            class="h-16 w-16"
+            src="https://icons8.com/preloaders/preloaders/1488/Iphone-spinner-2.gif"
+            alt=""
+          />
+        </div>
+      </div>
+    </main>
+    <AlphabetDrinks class="relative bottom-0 mb-10" />
   </div>
 </template>
 
@@ -70,24 +81,37 @@ export default {
   data () {
     return {
       drinks: [],
-      search: 'margarita',
-      error: ''
+      search: '',
+      error: '',
+      loading: false
     }
   },
   mounted () {
-    this.searchDrinks()
+    this.getRandom()
   },
   methods: {
-    searchDrinks () {
+    getRandom () {
+      this.loading = true
       this.$store
         .dispatch('getRandomCocktail')
         .then((response) => {
           this.drinks = response.data.drinks[0]
           console.log(this.drinks)
+          this.loading = false
         })
         .catch((error) => {
           this.error = error
         })
+    },
+    searchCocktail () {
+      console.log(this.search)
+      this.$router.push({ name: 'Search', params: { search: this.search } })
+    },
+    getDetails () {
+      this.$router.push({
+        name: 'Cocktail',
+        params: { id: this.drinks.idDrink }
+      })
     }
   }
 }
