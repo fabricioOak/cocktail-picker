@@ -1,19 +1,19 @@
 <template>
-  <header class="w-full px-8 text-gray-700 bg-white">
+  <header class="w-full px-8 text-gray-700 bg-white shadow-md">
     <div
       class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl"
     >
-      <div class="relative flex flex-col md:flex-row">
-        <router-link :to="{ name: 'Home' }">
-          <a
-            href="#_"
-            class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
+      <div class="relative items-center flex flex-col md:flex-row">
+        <img class="h-12" src="../assets/images/logo.svg" alt="" />
+        <router-link
+          :to="{ name: 'Home' }"
+          href="#_"
+          class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
+        >
+          <span
+            class="mx-auto text-xl font-black leading-none text-gray-900 select-none"
+            >Cocktail Picker<span class="text-pink-600">.</span></span
           >
-            <span
-              class="mx-auto text-xl font-black leading-none text-gray-900 select-none"
-              >Cocktail Picker<span class="text-pink-600">.</span></span
-            >
-          </a>
         </router-link>
       </div>
       <div class="pt-2 relative text-gray-600">
@@ -22,8 +22,15 @@
           type="search"
           name="search"
           placeholder="Search"
+          :value="drink"
+          @input="$emit('input', $event.target.value)"
+          @keyup.enter="$emit('search-drink')"
         />
-        <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+        <button
+          @click="$emit('search-drink')"
+          type="submit"
+          class="absolute right-0 top-0 mt-5 mr-4"
+        >
           <svg
             class="text-gray-600 h-4 w-4 fill-current"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,3 +54,15 @@
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  props: {
+    drink: {
+      type: String,
+      required: false,
+      default: ''
+    }
+  }
+}
+</script>
