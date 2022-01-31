@@ -58,7 +58,20 @@ export default new Vuex.Store({
             reject(error)
           })
       })
+    },
+    getCocktailDetails ({ commit }, { id }) {
+      return new Promise((resolve, reject) => {
+        commit('SET_LOADING', true)
+        CocktailsService.getCocktailDetails(id)
+          .then((response) => {
+            commit('SET_LOADING', false)
+            resolve(response)
+          })
+          .catch((error) => {
+            commit('SET_LOADING', false)
+            reject(error)
+          })
+      })
     }
-  },
-  modules: {}
+  }
 })
