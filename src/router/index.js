@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Landing from '../views/Landing.vue'
 import Home from '../views/Home.vue'
+import Search from '../views/Search.vue'
+import Cocktail from '../views/Cocktail.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +17,16 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/search/:search',
+    name: 'Search',
+    component: Search
+  },
+  {
+    path: '/cocktail/:id',
+    name: 'Cocktail',
+    component: Cocktail
   }
 ]
 
