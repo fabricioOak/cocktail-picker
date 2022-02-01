@@ -16,6 +16,9 @@ const CocktailsService = {
   },
   async getCocktailDetails (id) {
     return await ApiService.get(Cocktails.getCocktailDetails(id))
+  },
+  async searchByUniqueLetter (letter) {
+    return await ApiService.get(Cocktails.searchByUniqueLetter(letter))
   }
 }
 
