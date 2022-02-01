@@ -153,7 +153,7 @@
         </div>
       </div>
     </main>
-    <AlphabetDrinks class="relative bottom-0 mb-10" />
+    <!-- <AlphabetDrinks class="relative bottom-0 mb-10" /> -->
   </div>
 </template>
 
