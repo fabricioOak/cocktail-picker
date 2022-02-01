@@ -27,6 +27,10 @@ const routes = [
     path: '/cocktail/:id',
     name: 'Cocktail',
     component: Cocktail
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 
