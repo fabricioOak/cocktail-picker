@@ -34,36 +34,118 @@
             />
           </div>
         </div>
+
         <div
-          class="flex flex-row items-center justify-center w-full h-full py-6 pl-10 mb-6 md:mb-0 md:w-1/2"
+          class="container items-center max-w-6xl px-5 h-full mt-8 text-center"
         >
           <div
-            class="flex flex-row items-start justify-center h-full space-y-3 transform md:py-16 md:px-16 md:space-y-5"
+            class="grid w-full grid-cols- gap-4 sm:grid-cols-2 lg:grid-cols-2"
           >
-            <div class="w-full">
-              <span class="text-2xl font-bold text-center mr-3"
-                >Ingredients</span
-              >
-              <span class="text-2xl font-bold text-center ml-3">Measure</span>
-              <div class="flex flex-col justify-between items-center">
-                <div>
-                  <span>{{ this.drinks.strIngredient1 }}</span>
-                  <span>{{ this.drinks.strIngredient2 }}</span>
-                  <span>{{ this.drinks.strIngredient3 }}</span>
-                  <span>{{ this.drinks.strIngredient4 }}</span>
-                  <span>{{ this.drinks.strIngredient5 }}</span>
-                  <span>{{ this.drinks.strIngredient6 }}</span>
-                  <span>{{ this.drinks.strIngredient7 }}</span>
-                  <span>{{ this.drinks.strIngredient8 }}</span>
-                </div>
-                <div>
-                  <span>{{ this.drinks.strMeasure1 }}</span>
-                  <span>{{ this.drinks.strMeasure2 }}</span>
-                  <span>{{ this.drinks.strMeasure3 }}</span>
-                  <span>{{ this.drinks.strMeasure4 }}</span>
-                  <span>{{ this.drinks.strMeasure5 }}</span>
-                  <span>{{ this.drinks.strMeasure6 }}</span>
-                  <span>{{ this.drinks.strMeasure8 }}</span>
+            <div class="flex flex-col items-center justify-center col-span-1">
+              <table class="table-auto">
+                <thead>
+                  <tr>
+                    <th class="px-6 py-2 font-bold text-2xl text-pink-500">
+                      Ingredients
+                    </th>
+                    <th class="px-6 py-2 font-bold text-2xl text-pink-500">
+                      Measures
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient1 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure1 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient2 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure2 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient3 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure3 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient4 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure4 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient5 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure5 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient6 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure6 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient7 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure7 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient8 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure8 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient9 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure9 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strIngredient10 }}
+                    </td>
+                    <td class="p-1 font-semibold text-center">
+                      {{ this.drinks.strMeasure10 }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="flex flex-col items-center justify-start col-span-1">
+              <div class="mt-3 space-y-2 text-center">
+                <div class="space-y-1 text-lg font-medium leading-6">
+                  <div>
+                    <p class="py-2 text-3xl font-bold">How to prepare:</p>
+                    <p class="text-justifytext-lg font-medium">
+                      {{ this.drinks.strInstructions }}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
