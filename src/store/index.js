@@ -72,6 +72,20 @@ export default new Vuex.Store({
             reject(error)
           })
       })
+    },
+    searchByUniqueLetter ({ commit }, { letter }) {
+      return new Promise((resolve, reject) => {
+        commit('SET_LOADING', true)
+        CocktailsService.searchByUniqueLetter(letter)
+          .then((response) => {
+            commit('SET_LOADING', false)
+            resolve(response)
+          })
+          .catch((error) => {
+            commit('SET_LOADING', false)
+            reject(error)
+          })
+      })
     }
   }
 })
