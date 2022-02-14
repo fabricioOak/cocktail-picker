@@ -14,6 +14,7 @@
               class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-200"
             ></div>
             <img
+              loading="lazy"
               @click="getDetails"
               :src="this.drinks.strDrinkThumb"
               class="relative cursor-pointer hover:scale-100 scale-90 duration-150 transform h-56 z-20 w-56 lg:h-96 lg:w-96 rounded-full"
@@ -62,14 +63,10 @@
       </div>
     </main>
     <main v-else>
-      <div class="h-screen bg-white">
-        <div class="flex justify-center items-center h-full">
-          <img
-            class="h-16 w-16"
-            src="https://icons8.com/preloaders/preloaders/1488/Iphone-spinner-2.gif"
-            alt=""
-          />
-        </div>
+      <div class="h-96 w-screen flex items-center justify-center text-center">
+        <div
+          class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"
+        ></div>
       </div>
     </main>
     <!-- <AlphabetDrinks class="relative bottom-0 mb-10" /> -->

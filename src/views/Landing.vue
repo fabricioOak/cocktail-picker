@@ -57,8 +57,8 @@
             @click="getDetails(drinksOne.idDrink)"
           />
           <DrinkThumb
-            :src="this.drinksTwo.strDrinkThumb"
-            :name="this.drinksTwo.strDrink"
+            :src="drinksTwo.strDrinkThumb"
+            :name="drinksTwo.strDrink"
             @click="getDetails(drinksTwo.idDrink)"
           />
           <DrinkThumb

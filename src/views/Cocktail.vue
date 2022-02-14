@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header @search-drink="searchCocktail" v-model="search" />
-    <main>
+    <main v-if="!loading">
       <h1 class="text-center text-2xl sm:text-4xl font-black mt-10">
         {{ this.drinks.strDrink }}
       </h1>
@@ -29,8 +29,9 @@
               class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-200"
             ></div>
             <img
+              loading="lazy"
               :src="this.drinks.strDrinkThumb"
-              class="relative cursor-pointer hover:scale-100 scale-90 duration-150 transform h-56 z-20 w-56 lg:h-96 lg:w-96 rounded-full"
+              class="relative scale-100 duration-150 transform h-56 z-20 w-56 lg:h-96 lg:w-96 rounded-full"
             />
           </div>
         </div>
@@ -153,6 +154,13 @@
         </div>
       </div>
     </main>
+    <main v-else>
+      <div class="h-96 w-screen flex items-center justify-center text-center">
+        <div
+          class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"
+        ></div>
+      </div>
+    </main>
     <!-- <AlphabetDrinks class="relative bottom-0 mb-10" /> -->
   </div>
 </template>
@@ -171,6 +179,7 @@ export default {
   },
   methods: {
     getCocktailDetails () {
+      this.loading = true
       this.$store
         .dispatch('getCocktailDetails', {
           id: this.$route.params.id
@@ -178,9 +187,11 @@ export default {
         .then((response) => {
           this.drinks = response.data.drinks[0]
           console.log(this.drinks)
+          this.loading = false
         })
         .catch((error) => {
           this.error = error
+          this.loading = false
         })
     },
     getCocktail () {
