@@ -45,11 +45,9 @@
         </div>
       </div>
       <div
-        class="container items-center max-w-3xl px-5 mx-auto mt-8 text-center"
+        class="container items-center max-w-5xl px-5 mx-auto mt-16 text-center"
       >
-        <div
-          class="grid w-full h-full grid-cols- gap-4 sm:grid-cols-3 lg:grid-cols-3"
-        >
+        <div class="grid w-full h-full gap-4 sm:grid-cols-3 lg:grid-cols-3">
           <!-- I don't have access to a "get ten ramdon drinks" so I made this -->
           <DrinkThumb
             :src="this.drinksOne.strDrinkThumb"
@@ -66,21 +64,6 @@
             :name="this.drinksThree.strDrink"
             @click="getDetails(drinksThree.idDrink)"
           />
-          <DrinkThumb
-            :src="this.drinksFour.strDrinkThumb"
-            :name="this.drinksFour.strDrink"
-            @click="getDetails(drinksFour.idDrink)"
-          />
-          <DrinkThumb
-            :src="this.drinksFive.strDrinkThumb"
-            :name="this.drinksFive.strDrink"
-            @click="getDetails(drinksFive.idDrink)"
-          />
-          <DrinkThumb
-            :src="this.drinksSix.strDrinkThumb"
-            :name="this.drinksSix.strDrink"
-            @click="getDetails(drinksSix.idDrink)"
-          />
         </div>
       </div>
     </main>
@@ -95,19 +78,13 @@ export default {
     return {
       drinksOne: [],
       drinksTwo: [],
-      drinksThree: [],
-      drinksFour: [],
-      drinksFive: [],
-      drinksSix: []
+      drinksThree: []
     }
   },
   mounted () {
     this.getRandomOne()
     this.getRandomTwo()
     this.getRandomThree()
-    this.getRandomFour()
-    this.getRandomFive()
-    this.getRandomSix()
   },
   methods: {
     getRandomOne () {
@@ -141,42 +118,6 @@ export default {
         .dispatch('getRandomCocktail')
         .then((response) => {
           this.drinksThree = response.data.drinks[0]
-          this.loading = false
-        })
-        .catch((error) => {
-          this.error = error
-        })
-    },
-    getRandomFour () {
-      this.loading = true
-      this.$store
-        .dispatch('getRandomCocktail')
-        .then((response) => {
-          this.drinksFour = response.data.drinks[0]
-          this.loading = false
-        })
-        .catch((error) => {
-          this.error = error
-        })
-    },
-    getRandomFive () {
-      this.loading = true
-      this.$store
-        .dispatch('getRandomCocktail')
-        .then((response) => {
-          this.drinksFive = response.data.drinks[0]
-          this.loading = false
-        })
-        .catch((error) => {
-          this.error = error
-        })
-    },
-    getRandomSix () {
-      this.loading = true
-      this.$store
-        .dispatch('getRandomCocktail')
-        .then((response) => {
-          this.drinksSix = response.data.drinks[0]
           this.loading = false
         })
         .catch((error) => {
