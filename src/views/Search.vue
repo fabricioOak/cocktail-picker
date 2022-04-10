@@ -17,6 +17,7 @@
                 class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-purple-200"
               ></div>
               <img
+                alt="Cocktail image"
                 loading="lazy"
                 @click="getDetails(drink.idDrink)"
                 :src="drink.strDrinkThumb"

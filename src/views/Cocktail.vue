@@ -29,6 +29,7 @@
               class="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-200"
             ></div>
             <img
+              alt="Cocktail image"
               loading="lazy"
               :src="this.drinks.strDrinkThumb"
               class="relative scale-100 duration-150 transform h-56 z-20 w-56 lg:h-96 lg:w-96 rounded-full"

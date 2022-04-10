@@ -4,7 +4,7 @@
       class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl"
     >
       <div class="relative items-center flex flex-col md:flex-row">
-        <img class="h-12" src="../assets/images/logo.svg" alt="" />
+        <img class="h-12" src="../assets/images/logo.svg" alt="Site logo" />
         <router-link
           :to="{ name: 'Home' }"
           href="#_"

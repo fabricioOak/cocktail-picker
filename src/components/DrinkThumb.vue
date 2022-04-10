@@ -6,6 +6,7 @@
         :style="{ backgroundColor: this.color }"
       ></div>
       <img
+        alt="Cocktail image"
         @click="$emit('click')"
         class="cursor-pointer relative hover:scale-110 scale-100 duration-150 transform h-52 z-20 w-52 rounded-full"
         :src="src"
