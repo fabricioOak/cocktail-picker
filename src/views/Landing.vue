@@ -7,7 +7,7 @@
         <h1
           class="text-4xl font-extrabold tracking-tight text-left text-gray-900 sm:text-5xl md:text-6xl md:text-center"
         >
-          <span class="m-2 block"
+          <span class="font-black m-2 block"
             >Prepare
             <span class="block mt-1 text-pink-500 lg:inline lg:mt-0"
               >Beautiful Cocktails</span
