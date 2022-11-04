@@ -4,6 +4,7 @@ import Landing from '../views/Landing.vue'
 import Home from '../views/Home.vue'
 import Search from '../views/Search.vue'
 import Cocktail from '../views/Cocktail.vue'
+import LetterSearch from '../views/LetterSearch.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/cocktail/:id',
     name: 'Cocktail',
     component: Cocktail
+  },
+  {
+    path: '/drinks/:letter',
+    name: 'LetterSearch',
+    component: LetterSearch
   },
   {
     path: '*',

@@ -187,7 +187,6 @@ export default {
         })
         .then((response) => {
           this.drinks = response.data.drinks[0]
-          console.log(this.drinks)
           this.loading = false
         })
         .catch((error) => {
@@ -202,7 +201,6 @@ export default {
         })
         .then((response) => {
           this.drinks = response.data.drinks
-          console.log(this.drinks)
         })
         .catch((error) => {
           this.error = error

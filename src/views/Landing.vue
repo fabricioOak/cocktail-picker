@@ -93,7 +93,6 @@ export default {
         .dispatch('getRandomCocktail')
         .then((response) => {
           this.drinksOne = response.data.drinks[0]
-          console.log(this.drinksOne.idDrink)
           this.loading = false
         })
         .catch((error) => {
