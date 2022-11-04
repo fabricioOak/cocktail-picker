@@ -70,7 +70,7 @@
         ></div>
       </div>
     </main>
-    <!-- <AlphabetDrinks class="relative bottom-0 mb-10" /> -->
+    <AlphabetDrinks class="relative bottom-0 mb-10" />
   </div>
 </template>
 
@@ -94,7 +94,6 @@ export default {
         .dispatch('getRandomCocktail')
         .then((response) => {
           this.drinks = response.data.drinks[0]
-          console.log(this.drinks)
           this.loading = false
         })
         .catch((error) => {
@@ -102,7 +101,6 @@ export default {
         })
     },
     searchCocktail () {
-      console.log(this.search)
       this.$router.push({ name: 'Search', params: { search: this.search } })
     },
     getDetails () {
