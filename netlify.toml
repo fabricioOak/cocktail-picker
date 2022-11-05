@@ -2,4 +2,3 @@
   from = "/*"
   to = "/"
   status = 200
-  skip_deploy_on_missing_secrets
